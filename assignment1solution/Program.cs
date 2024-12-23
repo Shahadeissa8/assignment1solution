@@ -85,9 +85,6 @@ bool SimpleEven(string even)
             return false;
         }
     }
-    return true;
-
-
     bool result = SimpleEven(even);
 
     if (result)
@@ -98,8 +95,10 @@ bool SimpleEven(string even)
     {
         Console.WriteLine("false");
     }
+    return true;
 
 }
+Console.WriteLine(SimpleEven(even));
 #endregion
 
 
@@ -107,5 +106,25 @@ Console.WriteLine("=======one decrement========");
 
 #region q5
 
+Console.WriteLine("Enter a string of digits to check for decrements: ");
+string strr = Console.ReadLine();
 
+int OneDecremented(string strr)
+{
+    int count = 0;
+
+    for (int i = 1; i < strr.Length; i++)
+    {
+        if (str[i] == str[i - 1] - 1)
+        {
+            count++;
+        }
+    }
+
+    return count; 
+}
+
+
+int resultt = OneDecremented(strr);
+Console.WriteLine("The count of decrements is: " + resultt);
 #endregion
